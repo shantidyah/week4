@@ -22,7 +22,7 @@ function hitungHuruf(kata) {
   pjgkata=pjgkata.indexOf(a);
 
 
-console.log(kata[pjgkata]);
+return kata[pjgkata];
 }
 
 // TEST CASES
