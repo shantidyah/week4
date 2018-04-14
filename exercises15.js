@@ -44,9 +44,6 @@ function setLowerUpperCase (str) {
 
 function removeSpaces (str) {
   var kata=[];
-  if(str.length<5){
-    return 'Minimal karakter yang diinputkan adalah 5 karakter';
-  }
   for(i=0;i<str.length;i++){
     if(str[i]!==' '){
       kata.push(str[i]);
@@ -56,6 +53,9 @@ function removeSpaces (str) {
 }
 
 function passwordGenerator (name) {
+  if(name.length<5){
+    return 'Minimal karakter yang diinputkan adalah 5 karakter';
+  }
   var change=changeVocals(name);
   var reverse=reverseWord(change);
   var lowerupercase=setLowerUpperCase(reverse);
