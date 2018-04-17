@@ -5,18 +5,18 @@ function changeMe(arr) {
     var b=0;
     var arrLiteral={firstname:'',lastname:'',gender:'',age:''};
     for(var key in arrLiteral){
-
       arrLiteral[key]=arr[i][b];
+
       b++;
-      if(arrLiteral.age===undefined){
-        arrLiteral.age='Invalid Birth Year';
-      }
-      else{
-        arrLiteral.age=2018-arr[i][3];
-      }
+    }
+    if(arrLiteral.age===undefined){
+
+      arrLiteral.age='Invalid Birth Year';
+    }
+    else{
+      arrLiteral.age=2018-arr[i][3];
     }
     a.push(arrLiteral);
-
   }
   if(a.length===0){
     console.log("");
