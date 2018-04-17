@@ -8,7 +8,7 @@ function shoppingTime(memberId, money) {
             'sweater uniklooh':175000,
             'casing handphone':50000
           };
-  var uang=money;
+  // var uang=money;
   var kembalian=0;
 
 
@@ -28,13 +28,13 @@ function shoppingTime(memberId, money) {
   for(var key in sale){
 
     if(money-sale[key]>=0){
-      uang-=sale[key];
-      if(uang>=0){
+      money-=sale[key];
+      // if(uang>=0){
         list.push(key);
-        kembalian=uang;
-      }
+        kembalian=money;
+      // }
     }
-
+    console.log(kembalian);
   }
   shopping.listPurchased=list;
   shopping.changeMoney=kembalian;
